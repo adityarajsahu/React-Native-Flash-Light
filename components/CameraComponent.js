@@ -27,6 +27,9 @@ const CameraComponent = () => {
         <View style={styles.cameraContainer}>
             <Camera style={styles.camera} type={Camera.Constants.Type.back} flashMode={FlashMode.off}></Camera>
             <FlashLightComponent />
+            {/* <View>
+                <Text>Flash Light</Text>
+            </View> */}
         </View>
     );
 };
