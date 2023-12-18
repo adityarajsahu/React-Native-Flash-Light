@@ -4,14 +4,14 @@ import { FlashMode } from "expo-camera";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Entypo } from "react-native-vector-icons";
 
-const FlashLightComponent = ({ updateFlashMode }) => {
+const FlashLightComponent = ({ setFlashMode, flashMode }) => {
     const handleFlashLight = () => {
-        if (updateFlashMode === FlashMode.torch) {
-            updateFlashMode(FlashMode.off);
-            console.log("Flashlight OFF");
+        if (flashMode === FlashMode.off) {
+            setFlashMode(FlashMode.torch);
+            console.log("Flashlight ON: FlashLightComponent");
         } else {
-            updateFlashMode(FlashMode.torch);
-            console.log("Flashlight ON");
+            setFlashMode(FlashMode.off);
+            console.log("Flashlight OFF: FlashLightComponent");
         }
     };
 
